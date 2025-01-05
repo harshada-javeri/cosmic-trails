@@ -37,3 +37,39 @@ Version Control: GitHub
 GitHub Copilot: Assisted in coding tasks
 Sound Design: Audacity
 Image Assets: Photoshop
+
+Directory Structure
+
+cosmic-trails/
+├── Assets/
+│   ├── 3DModels/
+│   ├── Textures/
+│   ├── Audio/
+│   └── Prefabs/
+├── Scripts/
+│   ├── PlayerController.cs
+│   ├── EnemyAI.cs
+│   ├── GameManager.cs
+│   ├── Collectible.cs
+│   └── UIManager.cs
+├── Scenes/
+│   ├── MainMenu.unity
+│   ├── Level1.unity
+│   └── GameOver.unity
+├── Build/
+│   └── WebGL/
+├── Documentation/
+│   ├── README.md
+│   ├── CONTRIBUTING.md
+│   ├── LICENSE.md
+│   └── CHANGELOG.md
+├── AWS/
+│   ├── lambda_function.py
+│   ├── serverless.yml
+│   └── deploy.sh
+├── Docs/
+│   └── AWS_Integration.md
+├── .gitignore
+├── LICENSE.md
+├── README.md
+└── package.json
