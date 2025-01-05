@@ -1,0 +1,20 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainMenu : MonoBehaviour
+{
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Level1"); // Replace "Level1" with your game scene name
+    }
+
+    public void ViewInstructions()
+    {
+        // Implement instructions view logic here
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+}

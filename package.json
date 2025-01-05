@@ -1,0 +1,17 @@
+{
+  "name": "cosmic-trails",
+  "version": "1.0.0",
+  "description": "\"Discover, Explore, Conquer: Forge Your Trail Among the Stars.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

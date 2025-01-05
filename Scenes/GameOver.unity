@@ -1,0 +1,23 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class GameOverManager : MonoBehaviour
+{
+    public Text finalScoreText;
+
+    void Start()
+    {
+        finalScoreText.text = "Final Score: " + PlayerPrefs.GetInt("FinalScore", 0);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Level1"); // Replace "Level1" with your game scene name
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+}
