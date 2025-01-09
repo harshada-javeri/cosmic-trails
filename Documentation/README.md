@@ -74,4 +74,4 @@ cosmic-trails/
 ├── README.md
 └── package.json
 
-![Screenshot](Documentation/screenshot.png)
+![Screenshot](\Users\harshada\Project\cosmic-trails\Documentation\screenshot.png)
