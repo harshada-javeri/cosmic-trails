@@ -29,15 +29,35 @@ public class PlayerController : MonoBehaviour
         // Shooting
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            private readonly object _lockObject = new object();
+    private float nextFire;
+
+    void UpdateFiring()
+    {
+        lock (_lockObject)
+        {
             nextFire = Time.time + fireRate;
-            ShootLaser();
         }
     }
 
-    void ShootLaser()
+    bool CanFire()
     {
-        GameObject laser = Instantiate(laserPrefab, laserSpawn.position, laserSpawn.rotation);
-        Rigidbody rb = laser.GetComponent<Rigidbody>();
+        lock (_lockObject)
+        {
+            return Time.time >= nextFire;
+        }
+    }
+    ShootLaser();
+}
+    }
+
+    void ShootLaser()
+{
+    GameObject laser = Instantiate(laserPrefab, laserSpawn.position, laserSpawn.rotation);
+    Rigidbody rb = laser.GetComponent<Rigidbody>();
+    lock (this)
+    {
         rb.velocity = laserSpawn.forward * laserSpeed;
     }
+}
 }

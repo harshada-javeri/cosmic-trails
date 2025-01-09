@@ -49,7 +49,10 @@ public class EnemyAI : MonoBehaviour
 
         if (Vector3.Distance(transform.position, targetPatrolPoint.position) < 0.5f)
         {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Count;
+            lock (patrolPoints)
+            {
+                currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Count;
+            }
         }
     }
 }
