@@ -73,3 +73,5 @@ cosmic-trails/
 ├── LICENSE.md
 ├── README.md
 └── package.json
+
+![Screenshot](Documentation/screenshot.png)
