@@ -55,4 +55,8 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
-}
+    // Add screenshot functionality when enemy detects player
+void TakeScreenshot()
+{
+    ScreenCapture.CaptureScreenshot("Enemy_Detection_" + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".png");
+}    }

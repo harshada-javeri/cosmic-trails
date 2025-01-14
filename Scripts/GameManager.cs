@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         score += value;
         UpdateScoreText();
+        ScreenCapture.CaptureScreenshot("screenshot.png");
     }
 
     void UpdateScoreText()
